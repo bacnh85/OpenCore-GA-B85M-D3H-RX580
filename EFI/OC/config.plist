@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>#WARNING - 1</key>
-	<string>This is just a sample. Do NOT try loading it.</string>
-	<key>#WARNING - 2</key>
-	<string>Ensure you understand EVERY field before booting.</string>
-	<key>#WARNING - 3</key>
-	<string>In most cases recommended to use Sample.plist</string>
-	<key>#WARNING - 4</key>
-	<string>Use SampleFull.plist for end of life models: 2011 and older.</string>
-	<key>#WARNING - 5</key>
-	<string>https://github.com/acidanthera/OpenCorePkg/blob/master/AppleModels/DataBase.md</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
@@ -29,6 +19,14 @@
 				<string>SSDT-PLUG-DRTNIA.aml</string>
 				<key>Path</key>
 				<string>SSDT-PLUG-DRTNIA.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>FixShutdown-USB-SSDT.aml</string>
+				<key>Path</key>
+				<string>FixShutdown-USB-SSDT.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -109,6 +107,32 @@
 				<data></data>
 				<key>Replace</key>
 				<data>WFExMg==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>_PTS to ZPTS</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>X1BUUw==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WlBUUw==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -220,6 +244,12 @@
 			<data></data>
 			<key>Cpuid1Mask</key>
 			<data></data>
+			<key>DummyPowerManagement</key>
+			<false/>
+			<key>MaxKernel</key>
+			<string></string>
+			<key>MinKernel</key>
+			<string></string>
 		</dict>
 		<key>Quirks</key>
 		<dict>
@@ -237,8 +267,6 @@
 			<true/>
 			<key>DisableRtcChecksum</key>
 			<false/>
-			<key>DummyPowerManagement</key>
-			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
@@ -255,6 +283,10 @@
 			<true/>
 			<key>DisableLinkeditJettison</key>
 			<true/>
+			<key>ExtendBTFeatureFlags</key>
+			<false/>
+			<key>LegacyCommpage</key>
+			<false/>
 		</dict>
 		<key>Force</key>
 		<array>
@@ -305,6 +337,8 @@
 				<string>Contents/MacOS/Lilu</string>
 				<key>BundlePath</key>
 				<string>Lilu.kext</string>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -321,6 +355,8 @@
 				<string>Contents/MacOS/VirtualSMC</string>
 				<key>BundlePath</key>
 				<string>VirtualSMC.kext</string>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -337,6 +373,8 @@
 				<string>Contents/MacOS/AppleALC</string>
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -353,6 +391,8 @@
 				<string>Contents/MacOS/RealtekRTL8111</string>
 				<key>BundlePath</key>
 				<string>RealtekRTL8111.kext</string>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -369,6 +409,8 @@
 				<string>Contents/MacOS/SMCProcessor</string>
 				<key>BundlePath</key>
 				<string>SMCProcessor.kext</string>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -385,6 +427,8 @@
 				<string>Contents/MacOS/SMCSuperIO</string>
 				<key>BundlePath</key>
 				<string>SMCSuperIO.kext</string>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -401,6 +445,8 @@
 				<string>Contents/MacOS/USBInjectAll</string>
 				<key>BundlePath</key>
 				<string>USBInjectAll.kext</string>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -417,6 +463,8 @@
 				<string>Contents/MacOS/WhateverGreen</string>
 				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 		</array>
 		<key>Block</key>
@@ -432,6 +480,8 @@
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
+				<key>Arch</key>
+				<string>Any</string>
 			</dict>
 		</array>
 		<key>Patch</key>
@@ -463,6 +513,8 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
+				<key>Arch</key>
+				<string>Any</string>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -491,6 +543,8 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
+				<key>Arch</key>
+				<string>Any</string>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -519,6 +573,8 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -547,6 +603,8 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
+				<key>Arch</key>
+				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -571,6 +629,38 @@
 				<string></string>
 				<key>Replace</key>
 				<data>MduKD4TJdQT/w7EKZrr9A+yoIHT7Zrr4A4jI7kj/x4XbdN/D</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>Arch</key>
+				<string>x86_64</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string>_vstart</string>
+				<key>Comment</key>
+				<string>Print K and dead loop</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data></data>
+				<key>Identifier</key>
+				<string>kernel</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data>sUtmuv0D7KggdPtmuvgDiMjusQpmuv0D7KggdPtmuvgDiMju6/4=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -712,7 +802,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 shikigva=16</string>
+				<string>keepsyms=1 shikigva=16</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -790,6 +880,10 @@
 			<string>D25QD0SNF8JC</string>
 			<key>SystemUUID</key>
 			<string>9D079D6B-996A-4CCE-86C9-55677D91DCDB</string>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
+			<key>ProcessorType</key>
+			<integer>0</integer>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -948,12 +1042,26 @@
 			<dict>
 				<key>Address</key>
 				<integer>268435456</integer>
+				<key>Type</key>
+				<string>Reserved</string>
 				<key>Comment</key>
 				<string>HD3000: IGPU memory corruption errata</string>
 				<key>Enabled</key>
 				<false/>
 				<key>Size</key>
 				<integer>268435456</integer>
+			</dict>
+			<dict>
+				<key>Address</key>
+				<integer>569344</integer>
+				<key>Type</key>
+				<string>RuntimeCode</string>
+				<key>Comment</key>
+				<string>Fix black screen on wake from hibernation for Lenovo Thinkpad T490</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Size</key>
+				<integer>4096</integer>
 			</dict>
 		</array>
 	</dict>
